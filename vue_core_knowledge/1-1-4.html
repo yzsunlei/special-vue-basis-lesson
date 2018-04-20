@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <button v-on:click="say('嗨')">弹出'嗨'</button>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+      say: function (message) {
+        alert(message);
+      }
+    }
+  })
+</script>
+</body>
+</html>

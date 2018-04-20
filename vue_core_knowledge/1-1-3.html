@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 你输入到input框中的内容会实时显示到p标签中 -->
+  <input v-model="message">
+  <p>你输入的内容是: {{message}}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      message: ''
+    }
+  })
+</script>
+</body>
+</html>

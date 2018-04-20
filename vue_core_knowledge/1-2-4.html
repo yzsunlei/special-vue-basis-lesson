@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 变量seen的值影响p标签的渲染 -->
+  <p v-if="seen">现在你看到我了</p>
+  <!-- 变量url的值就是a标签的链接地址 -->
+  <a v-bind:href="url">这里是个链接</a>
+  <!-- 变量doSomething是一个函数，a标签点击时会触发运行doSomething函数 -->
+  <a v-on:click="doSomething">点击触发事件</a>
+  <!-- prevent修饰符作用是阻止默认表单提交事件 -->
+  <form v-on:submit.prevent="onSubmit">修饰符作用</form>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      seen: true,
+      url: 'www.yzsunlei.com',
+    },
+    methods: {
+      doSomething: function () {
+        alert('输出点什么');
+      },
+      onSubmit: function () {
+        alert('阻止默认提交了');
+      }
+    }
+  })
+</script>
+</body>
+</html>

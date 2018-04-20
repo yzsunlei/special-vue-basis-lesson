@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <ul id="list">
+    <!-- 把items数组渲染成列表 -->
+    <li v-for="item in items">
+      {{ item.message }}
+    </li>
+    <hr/>
+    <!-- object对象中的数据渲染成列表 -->
+    <li v-for="value in object">
+      {{ value }}
+    </li>
+  </ul>
+</div>
+<script>
+  new Vue({
+    el: '#list',
+    data: {
+      items: [
+        { message: '列表项1' },
+        { message: '列表项2' },
+        { message: '列表项3' },
+      ],
+      object: {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 30
+      }
+    }
+  });
+</script>
+</body>
+</html>

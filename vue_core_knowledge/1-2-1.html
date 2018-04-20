@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 随变量msg的值进行更新 -->
+  <p>普通文本，双向绑定: {{ msg }}</p>
+  <!-- 不随msg的值进行更新 -->
+  <p v-once>普通文本，单次绑定: {{ msg }}</p>
+  <!-- 可以输出带html标签的富文本 -->
+  <p>输出html代码: <span v-html="rawHtml"></span></p>
+  <!-- 按钮是否可用取决于变量isDisabled转换的布尔取值 -->
+  <button v-bind:disabled="isDisabled">动态改变属性值</button>
+  <!-- 显示'是'还是'否'取决于变量value的布尔取值 -->
+  <p>{{ value ? '是' : '否' }}</p>
+  <!-- 字符串反转，如果message的值是123，则显示321 -->
+  <p>{{ message.split('').reverse().join('') }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      msg: '123',
+      rawHtml: '<span>富文本</span>',
+      isDisabled: true,
+      value: true,
+      message: '1314520'
+    }
+  })
+</script>
+</body>
+</html>

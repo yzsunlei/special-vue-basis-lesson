@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 当isOk为真时显示是，为假时显示否-->
+  <p>
+    <span v-if="isOk">是</span>
+    <span v-else>否</span>
+  </p>
+  <!-- 条件渲染分组，当isRender为真时，才会去渲染里面的DOM内容 -->
+  <template v-if="isRender">
+    <h1>标题</h1>
+    <p>段落 1</p>
+    <p>段落 2</p>
+  </template>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      isOk: true,
+      isRender: true
+    }
+  });
+</script>
+</body>
+</html>

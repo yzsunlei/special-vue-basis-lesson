@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <div id="dynamic-prop">
+    <input v-model="parentMsg">
+    <br>
+    <child v-bind:my-message="parentMsg"></child>
+  </div>
+</div>
+<script>
+  // 使用动态prop
+  Vue.component('child', {
+    // 声明 props
+    props: ['myMessage'],
+    // 就像 data 一样，prop 也可以在模板中使用
+    // 同样也可以在 vm 实例中通过 this.message 来使用
+    template: '<span>{{ myMessage }}</span>'
+  })
+
+  // 创建根实例
+  new Vue({
+    el: '#dynamic-prop',
+    data: {
+      parentMsg: '父组件发过来的消息'
+    }
+  })
+</script>
+</body>
+</html>

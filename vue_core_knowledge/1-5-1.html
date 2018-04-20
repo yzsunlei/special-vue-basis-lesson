@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <my-component></my-component>
+</div>
+<script>
+  // 全局注册组件
+  Vue.component('my-component', {
+    template: '<div>我的全局组件</div>'
+  })
+
+  // 创建根实例
+  new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>

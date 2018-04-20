@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 只有在 `keyCode` 是 13 时调用onSubmit方法 -->
+  <input v-on:keyup.13="onSubmit">
+
+  <!-- 同上，按下 enter 键后会调用onSubmit方法 -->
+  <input v-on:keyup.enter="onSubmit">
+
+  <!-- Ctrl 被按下时会触发，Ctrl和其他键一起按下也会触发(2.1.0 新增) -->
+  <div v-on:click.ctrl="onCtrlClick">点击键盘按键'Ctrl'看看</div>
+
+  <!-- 有且只有 Ctrl 被按下的时候才触发(2.5.0 新增) -->
+  <button v-on:click.ctrl.exact="onCtrlClick">点击键盘按键Ctrl</button>
+
+  <!-- 鼠标左键点击时会触发onClick方法(2.2.0 新增) -->
+  <div v-on:click.left="onClick">点击鼠标左键看看</div>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+      onSubmit() {
+        alert('提交了');
+      },
+      onCtrlClick() {
+        alert('按Ctrl键了');
+      },
+      onClick() {
+        alert('你点击鼠标左键了');
+      }
+    }
+  })
+</script>
+</body>
+</html>

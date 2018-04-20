@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <div id="calculate">
+    <button v-on:click="calculate(2, 3)">点击计算2+3</button>
+  </div>
+</div>
+<script>
+  new Vue({
+    el: '#calculate',
+    methods: {
+      calculate: function (a, b) {
+        alert(a + b);
+      }
+    }
+  })
+</script>
+</body>
+</html>

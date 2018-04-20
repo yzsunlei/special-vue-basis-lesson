@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 阻止单击事件继续传播 -->
+  <a v-on:click.stop="doThis">阻止单击事件继续传播</a>
+
+  <!-- 提交事件不再重载页面 -->
+  <form v-on:submit.prevent="onSubmit">阻止默认提交</form>
+
+  <!-- 修饰符可以串联 -->
+  <a v-on:click.stop.prevent="doThat">修饰符可以串联</a>
+
+  <!-- 只有修饰符 -->
+  <form v-on:submit.prevent>只有修饰符，没有任何操作</form>
+
+  <!-- 添加事件监听器时使用事件捕获模式 -->
+  <!-- 即元素自身触发的事件先在此处处理，然后才交由内部元素进行处理 -->
+  <div v-on:click.capture="doThis">点击看看</div>
+
+  <!-- 只当在 event.target 是当前元素自身时触发处理函数 -->
+  <!-- 即事件不是从内部元素触发的 -->
+  <div v-on:click.self="doThat">点击看看</div>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+      doThis() {
+        alert('做点什么呢');
+      },
+      doThat() {
+        alert('做点事情吧');
+      },
+      onSubmit() {
+        alert('提交去了哈');
+      }
+    }
+  })
+</script>
+</body>
+</html>

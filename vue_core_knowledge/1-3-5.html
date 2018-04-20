@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 变量city就是你下拉选择项的value值 -->
+  <h2>下拉单选框</h2>
+  <div id="select">
+    <select v-model="selected">
+      <option disabled value="">请选择</option>
+      <option>北京</option>
+      <option>上海</option>
+      <option>广州</option>
+      <option>深圳</option>
+      <option>杭州</option>
+    </select>
+    <span>你选中的城市: {{ selected }}</span>
+  </div>
+</div>
+<script>
+  new Vue({
+    el: '#select',
+    data: {
+      selected: '' // 使默认选择'请选择'
+    }
+  });
+</script>
+</body>
+</html>

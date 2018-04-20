@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 注意这里如果在文本区域插值 (<textarea></textarea>) 并不会生效 -->
+  <h2>多行文本框</h2>
+  <textarea v-model="message"></textarea>
+  <p>你输入的内容：{{ message }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      message: ''
+    }
+  });
+</script>
+</body>
+</html>

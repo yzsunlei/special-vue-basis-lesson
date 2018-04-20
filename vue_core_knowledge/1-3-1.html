@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 你可以通过变量message取到输入到文本框中的值 -->
+  <h2>单行文本框</h2>
+  <input v-model="message">
+  <p>你输入的内容: {{ message }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      message: ''
+    }
+  });
+</script>
+</body>
+</html>

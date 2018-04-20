@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 变量sex就是选中项的对应的value值 -->
+  <h2>单选框</h2>
+  <div id="radio">
+    <input type="radio" id="male" value="男" v-model="sex">
+    <label for="male">男</label>
+    <br>
+    <input type="radio" id="female" value="女" v-model="sex">
+    <label for="female">女</label>
+    <br>
+    <span>选择的性别： {{ sex }}</span>
+  </div>
+</div>
+<script>
+  new Vue({
+    el: '#radio',
+    data: {
+      sex: '男' // 使默认选中'男'
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+  <h2>多选框</h2>
+  <div id='checkbox'>
+    <input type="checkbox" id="apple" value="苹果" v-model="fruit">
+    <label for="apple">苹果</label>
+    <input type="checkbox" id="orange" value="桔子" v-model="fruit">
+    <label for="orange">桔子</label>
+    <input type="checkbox" id="banana" value="香蕉" v-model="fruit">
+    <label for="banana">香蕉</label>
+    <br>
+    <span>选中喜欢的水果： {{ fruit }}</span>
+  </div>
+</div>
+<script>
+  new Vue({
+    el: '#checkbox',
+    data: {
+      fruit: ['香蕉'] // 使默认选中'香蕉'
+    }
+  });
+</script>
+</body>
+</html>

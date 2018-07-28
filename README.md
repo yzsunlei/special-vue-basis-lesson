@@ -20,7 +20,7 @@
 * 2-8. [Vue.js简单实战之表格数据删除](http://www.yzsunlei.com/Vue.js-simple-and-practical-form-data-deletion.html)
 
 ## 实战说明
-* 进入vue_table_practice目录：`cd vue_table_practice
+* 进入vue_table_practice目录：`cd vue_table_practice`
 * 安装依赖包：`npm install`
 * 本地开发启动服务器：`npm run dev`
 * 项目截图，请吐槽

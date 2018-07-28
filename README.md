@@ -19,6 +19,18 @@
 * 2-7. [Vue.js简单实战之通过弹窗表单修改表格数据](http://www.yzsunlei.com/Vue.js-simple-and-practical-to-modify-table-data-through-pop-up-window-form.html)
 * 2-8. [Vue.js简单实战之表格数据删除](http://www.yzsunlei.com/Vue.js-simple-and-practical-form-data-deletion.html)
 
+## 实战说明
+* 进入vue_table_practice目录：`cd vue_table_practice
+* 安装依赖包：`npm install`
+* 本地开发启动服务器：`npm run dev`
+* 项目截图，请吐槽
+![表格增删改查](https://github.com/yzsunlei/vue_lesson/blob/master/screenshot_01.png)
+![表格弹窗修改](https://github.com/yzsunlei/vue_lesson/blob/master/screenshot_02.png)
+
 ## 更多资料
 * [https://cn.vuejs.org/v2/guide/](https://cn.vuejs.org/v2/guide/)
 * [http://www.runoob.com/vue2/vue-tutorial.html](http://www.runoob.com/vue2/vue-tutorial.html)
+
+## 关于我呢
+* 我是@小磊哥er，欢迎关注我的博客([www.yzsunlei.com](http://www.yzsunlei.com))
+* 不定时发布自己写的小项目，欢迎前来吐槽。觉得可以的话，记得star一下哦！ 

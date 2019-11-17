@@ -24,8 +24,8 @@
 * 安装依赖包：`npm install`
 * 本地开发启动服务器：`npm run dev`
 * 项目截图，请吐槽**
-![表格增删改查](https://github.com/yzsunlei/vue_lesson/blob/master/screenshot_01.png)
-![表格弹窗修改](https://github.com/yzsunlei/vue_lesson/blob/master/screenshot_02.png)
+![表格增删改查](https://github.com/yzsunlei/special_vue_basis_lesson/blob/master/screenshot_01.png)
+![表格弹窗修改](https://github.com/yzsunlei/special_vue_basis_lesson/blob/master/screenshot_02.png)
 
 ## 更多资料
 * [https://cn.vuejs.org/v2/guide/](https://cn.vuejs.org/v2/guide/)
